@@ -1,0 +1,22 @@
+{
+  "name": "react-notes",
+  "version": "1.0.0",
+  "description": "super notes manager",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/vijay22uk/react-notes.git"
+  },
+  "author": "vijay22uk",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/vijay22uk/react-notes/issues"
+  },
+  "homepage": "https://github.com/vijay22uk/react-notes#readme",
+  "dependencies": {
+    "express": "^4.15.1"
+  }
+}
