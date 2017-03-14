@@ -4,6 +4,8 @@
   "description": "super notes manager",
   "main": "server.js",
   "scripts": {
+    "start": "webpack -p && node server.js",
+    "start-dev": "./node_modules/.bin/concurrently 'nodemon server.js' 'webpack --watch'",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
@@ -17,6 +19,21 @@
   },
   "homepage": "https://github.com/vijay22uk/react-notes#readme",
   "dependencies": {
-    "express": "^4.15.1"
+    "classnames": "^2.2.5",
+    "express": "^4.15.1",
+    "lodash": "^4.17.4"
+  },
+  "devDependencies": {
+    "@types/classnames": "0.0.32",
+    "@types/lodash": "^4.14.55",
+    "@types/react": "^15.0.16",
+    "@types/react-dom": "^0.14.23",
+    "concurrently": "^3.4.0",
+    "nodemon": "^1.11.0",
+    "react": "^15.4.2",
+    "react-dom": "^15.4.2",
+    "source-map-loader": "^0.2.0",
+    "ts-loader": "^2.0.1",
+    "typescript": "^2.2.1"
   }
 }
