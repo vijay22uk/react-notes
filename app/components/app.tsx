@@ -2,6 +2,8 @@ import * as React from 'react'
 import { Container, ContainerListItem } from './containerListItem'
 import { ContainerList } from './containerList'
 import * as _ from 'lodash'
+import { NewContainerDialog } from './newContainerModal'
+import { DialogTrigger } from './dialogTrigger'
 class AppState {
     containers?: Container[]
     stoppedContainers?: Container[]
@@ -322,14 +324,19 @@ constructor() {
         stoppedContainers: partitioned[1]
     }
 }
+onRunImage(name: String) {
+    alert(name)
+}
 
     render() {
     return (
         <div className="container">
             <h1 className="page-header">Docker Dashboard</h1>
-
+            <DialogTrigger id="newContainerModal" buttonText="New container" />
             <ContainerList title="Running" containers={this.state.containers} />
             <ContainerList title="Stopped containers" containers={this.state.stoppedContainers} />
+
+            <NewContainerDialog id="newContainerModal" onRunImage={this.onRunImage.bind(this)} />
         </div>
     )
 }
